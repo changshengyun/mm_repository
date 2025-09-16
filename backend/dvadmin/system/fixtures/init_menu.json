@@ -1165,6 +1165,125 @@
                         "model": "FileList"
                     }
                 ]
+            },
+            {
+                "name": "企业管理",
+                "icon": "iconfont icon-enterprise",  
+                "sort": 4,  
+                "is_link": false,
+                "is_catalog": false,
+                "web_path": "/enterprise",
+                "component": "system/enterprise/index",
+                "component_name": "enterprise",
+                "status": true,
+                "cache": false,
+                "visible": true,
+                "parent": 10,
+                "children": [],
+                "menu_button": [
+                    {
+                        "name": "查询",
+                        "value": "enterprise:Search",
+                        "api": "/api/system/enterprise/",
+                        "method": 0
+                    },
+                    {
+                        "name": "详情",
+                        "value": "enterprise:Retrieve",
+                        "api": "/api/system/enterprise/{id}/",
+                        "method": 0
+                    },
+                    {
+                        "name": "新增",
+                        "value": "enterprise:Create",
+                        "api": "/api/system/enterprise/",
+                        "method": 1
+                    },
+                    {
+                        "name": "编辑",
+                        "value": "enterprise:Update",
+                        "api": "/api/system/enterprise/{id}/",
+                        "method": 2
+                    },
+                    {
+                        "name": "删除",
+                        "value": "enterprise:Delete",
+                        "api": "/api/system/enterprise/{id}/",
+                        "method": 3
+                    }
+                ],
+                "menu_field": [
+                    {
+                        "field_name": "code",
+                        "title": "地区编码",
+                        "model": "Enterprise"
+                    },
+                    {
+                        "field_name": "create_datetime",
+                        "title": "创建时间",
+                        "model": "Enterprise"
+                    },
+                    {
+                        "field_name": "creator",
+                        "title": "创建人",
+                        "model": "Enterprise"
+                    },
+                    {
+                        "field_name": "dept_belong_id",
+                        "title": "数据归属部门",
+                        "model": "Enterprise"
+                    },
+                    {
+                        "field_name": "description",
+                        "title": "描述",
+                        "model": "Enterprise"
+                    },
+                    {
+                        "field_name": "enable",
+                        "title": "是否启用",
+                        "model": "Enterprise"
+                    },
+                    {
+                        "field_name": "id",
+                        "title": "Id",
+                        "model": "Enterprise"
+                    },
+                    {
+                        "field_name": "initials",
+                        "title": "首字母",
+                        "model": "Enterprise"
+                    },
+                    {
+                        "field_name": "level",
+                        "title": "地区层级(1省份 2城市 3区县 4乡级)",
+                        "model": "Enterprise"
+                    },
+                    {
+                        "field_name": "modifier",
+                        "title": "修改人",
+                        "model": "Enterprise"
+                    },
+                    {
+                        "field_name": "name",
+                        "title": "名称",
+                        "model": "Enterprise"
+                    },
+                    {
+                        "field_name": "pcode",
+                        "title": "父地区编码",
+                        "model": "Enterprise"
+                    },
+                    {
+                        "field_name": "pinyin",
+                        "title": "拼音",
+                        "model": "Enterprise"
+                    },
+                    {
+                        "field_name": "update_datetime",
+                        "title": "修改时间",
+                        "model": "Enterprise"
+                    }
+                ]
             }
         ],
         "menu_button": [],

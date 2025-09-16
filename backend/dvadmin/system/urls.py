@@ -3,6 +3,7 @@ from rest_framework import routers
 
 from dvadmin.system.views.api_white_list import ApiWhiteListViewSet
 from dvadmin.system.views.area import AreaViewSet
+from dvadmin.system.views.enterprise import EnterpriseViewSet
 from dvadmin.system.views.clause import PrivacyView, TermsServiceView
 from dvadmin.system.views.dept import DeptViewSet
 from dvadmin.system.views.dictionary import DictionaryViewSet
@@ -29,6 +30,7 @@ system_url.register(r'user', UserViewSet)
 system_url.register(r'operation_log', OperationLogViewSet)
 system_url.register(r'dictionary', DictionaryViewSet)
 system_url.register(r'area', AreaViewSet)
+system_url.register(r'enterprise', EnterpriseViewSet)
 system_url.register(r'file', FileViewSet)
 system_url.register(r'api_white_list', ApiWhiteListViewSet)
 system_url.register(r'system_config', SystemConfigViewSet)
@@ -38,7 +40,6 @@ system_url.register(r'role_menu_permission', RoleMenuPermissionViewSet)
 system_url.register(r'column', MenuFieldViewSet)
 system_url.register(r'login_log', LoginLogViewSet)
 system_url.register(r'download_center', DownloadCenterViewSet)
-
 
 urlpatterns = [
     path('user/export/', UserViewSet.as_view({'post': 'export_data', })),

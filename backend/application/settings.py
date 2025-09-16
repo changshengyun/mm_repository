@@ -23,15 +23,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # ================================================= #
 
 from conf.env import *
-# from conf.env import (
-#     DATABASE_ENGINE,  # 必须包含这一行！
-#     DATABASE_NAME,
-#     DATABASE_USER,
-#     DATABASE_PASSWORD,
-#     DATABASE_HOST,
-#     DATABASE_PORT,
-#     DATABASE_CHARSET,
-# )
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
@@ -108,40 +99,16 @@ WSGI_APPLICATION = "application.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-# DATABASES = {
-#     "default": {
-#         "ENGINE": DATABASE_ENGINE,
-#         "NAME": DATABASE_NAME,
-#         "USER": DATABASE_USER,
-#         "PASSWORD": DATABASE_PASSWORD,
-#         "HOST": DATABASE_HOST,
-#         "PORT": DATABASE_PORT,
-#     }
-# }
-
-# 1. 暂时不用mysql
-# 数据库引擎：SQLite 固定值
-DATABASE_ENGINE = 'django.db.backends.sqlite3'
-# 数据库文件路径：建议放在 backend 目录下的 db 文件夹（需手动创建 db 文件夹）
-# 路径说明：./ 表示 backend 目录，db.sqlite3 是数据库文件名（自动生成）
-DATABASE_NAME = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'db', 'db.sqlite3')
-# 数据库文件路径（backend/db/db.sqlite3）
-
-
 DATABASES = {
-    'default': {
-        'ENGINE': DATABASE_ENGINE,  # 直接用导入的引擎，确保非空
-        'NAME': DATABASE_NAME,
-        'USER': DATABASE_USER,
-        'PASSWORD': DATABASE_PASSWORD,
-        'HOST': DATABASE_HOST,
-        'PORT': DATABASE_PORT,
-        # 避免空字符集导致的配置错误，加判断
-        'OPTIONS': {'charset': DATABASE_CHARSET} if DATABASE_CHARSET else {},
+    "default": {
+        "ENGINE": DATABASE_ENGINE,
+        "NAME": DATABASE_NAME,
+        "USER": DATABASE_USER,
+        "PASSWORD": DATABASE_PASSWORD,
+        "HOST": DATABASE_HOST,
+        "PORT": DATABASE_PORT,
     }
 }
-
-
 AUTH_USER_MODEL = "system.Users"
 USERNAME_FIELD = "username"
 

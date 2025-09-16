@@ -1,6 +1,8 @@
 /backend/venv
 /backend/.idea
 .idea
+.venv/
+backend/.venv/
 
 .history/
 .vscode/
