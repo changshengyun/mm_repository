@@ -464,6 +464,7 @@ export default defineComponent({
 			/* 文本与复选框的间距（默认约8px） */
 			padding-left: 5px; 
 			font-size: 15px; /* 匹配文本高度15px */
+			font-weight: 500;
 			width: 212px; /* 匹配文本宽度212px */
 			line-height: 15px; /* 行高与文本高度一致，确保垂直对齐 */
 			color: #333333; 
@@ -565,7 +566,7 @@ export default defineComponent({
 		line-height: 16px; 
 		height: 16px; // 固定文字高度，与行高一致
 		font-family: Microsoft YaHei;
-		font-weight: 400;
+		font-weight: 500;
 		font-size: 16px;
 		color: #333333;
 		text-align: center;

@@ -1,5 +1,6 @@
 <template>
 	<div class="login-container flex">
+		<!-- 左侧logo区域 -->
 		<div class="login-left">
 			<div class="login-left-logo">
 				<img :src="siteLogo" />
@@ -10,14 +11,15 @@
 			</div>
 		</div>
 		
-		<!-- 登录页面背景图 - 移到最底层 -->
+		<!-- 登录页面背景图 -->
 		<div v-if="loginBg" class="login-bg-container">
 			<img :src="loginBg" class="loginBg" />
 		</div>
 		
-		<!-- 右侧背景图层调整定位方式 -->
+		<!-- 右侧背景图层定位方式 -->
 		<div class="login-right-bg"></div>
 		
+		<!-- 右侧输入框定位方式 -->
 		<div class="login-right flex">
 			<div class="login-right-warp">
 				<div class="login-right-warp-mian">
@@ -156,6 +158,8 @@ onMounted(() => {
                 .main-title {
                     width: 259px;
                     height: 34px;
+					position: relative;
+  					left: 13px;
                     font-family: "AlimamaShuHeiTi";
                     font-weight: bold;
                     font-size: 36px;
